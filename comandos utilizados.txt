@@ -1,0 +1,9 @@
+#-----------------------------------------------------------------------------------------------------#
+                        #GUIA DE COMANDOS UTILIZADOS
+#-----------------------------------------------------------------------------------------------------#
+# PARA CRIAR UMA IMAGEM NO DOCKER --> docker build -t container-plex:1.0 .
+# PARA VERIFICAR SE A IMAGEM FOI FEITA COM SUCESSO --> docker images
+
+# PARA RODAR O DOCKER COMPOSE -- docker compose up -d 
+# PARA SABER SE O DOCKER ESTA RODANDO PERFEITAMENTE --> docker compose ps
+# caso precise do plex claim --> https://account.plex.tv/en/claim
