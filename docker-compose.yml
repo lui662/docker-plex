@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  plex:
+    image: container-plex:1.0
+    container_name: plex
+    environment:
+      - TZ=America/Fortaleza 
+      - PLEX_UID=${MEU_PLEX_UID}       
+      - PLEX_GID=${MEU_PLEX_GID}
+      - PLEX_ADVERTISE_IP=http://${MEU_ENDERECO_IP}:32400/   
+#      - PLEX_CLAIM=claim-kCNzzUzmgNZqm_WLvT8M
+    volumes:
+      - ./config:/config  # <-- A pasta de config ficará DENTRO do projeto
+      - ${MIDIA_PATH}/filmes:/filmes  # <-- Caminho para sua pasta de filmes
+      - ${MIDIA_PATH}/series:/series  # <-- Caminho para sua pasta de séries
+    ports:
+      - "32400:32400/tcp"
+      - "3005:3005/tcp"
+      - "8324:8324/tcp"
+      - "32469:32469/tcp"
+      - "1900:1900/udp"
+      - "32410:32410/udp"
+      - "32412:32412/udp"
+      - "32413:32413/udp"
+      - "32414:32414/udp"
+    restart: unless-stopped
