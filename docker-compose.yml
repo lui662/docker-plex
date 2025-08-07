@@ -9,7 +9,7 @@ services:
       - PLEX_UID=${MEU_PLEX_UID}       
       - PLEX_GID=${MEU_PLEX_GID}
       - PLEX_ADVERTISE_IP=http://${MEU_ENDERECO_IP}:32400/   
-#      - PLEX_CLAIM=claim-kCNzzUzmgNZqm_WLvT8M
+      - PLEX_CLAIM=claim-kCNzzUzmgNZqm_WLvT8M
     volumes:
       - ./config:/config  # <-- A pasta de config ficará DENTRO do projeto
       - ${MIDIA_PATH}/filmes:/filmes  # <-- Caminho para sua pasta de filmes
